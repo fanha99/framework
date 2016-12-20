@@ -42,6 +42,23 @@
 
 
     <PreferenceCategory
+        android:title="Phone calls"
+        android:key="crm_phonecalls_settings">
+        <SwitchPreference
+            android:key="phonecall_allow_caller_window"
+            android:title="Show caller window"
+            android:summary="Allow application to show caller window with customer opportunity"
+            android:summaryOff="Enable to show latest opportunity detail of caller customer"
+            android:defaultValue="true" />
+        <ListPreference
+            android:defaultValue="80"
+            android:entries="@array/callerWindowPosition"
+            android:entryValues="@array/callerWindowPositionValues"
+            android:key="caller_windows_position"
+            android:title="Caller Window Position" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="application_about"
         android:title="@string/title_about">
         <Preference

@@ -64,7 +64,7 @@ public class CallerWindow {
                         | WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
                 PixelFormat.TRANSLUCENT);
         // Fanha: not always on top, because some phone
-        // params.gravity = Gravity.TOP;
+        params.gravity = mPref.getInt("caller_windows_position",Gravity.CENTER);
         return params;
     }
 
@@ -135,7 +135,7 @@ public class CallerWindow {
                         }
                     });
                 }
-            }, 1000);
+            }, 200);
         }
     }
 

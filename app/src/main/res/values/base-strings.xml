@@ -106,6 +106,16 @@
         <item name="180">180</item>
         <item name="360">360</item>
     </string-array>
+    <string-array name="callerWindowPosition">
+        <item name="Gravity.TOP">Top</item>
+        <item name="Gravity.CENTER">Center</item>
+        <item name="Gravity.BOTTOM">Bottom</item>
+    </string-array>
+    <string-array name="callerWindowPositionValues">
+        <item name="Gravity.TOP">48</item>
+        <item name="Gravity.CENTER">17</item>
+        <item name="Gravity.BOTTOM">80</item>
+    </string-array>
     <string name="summary_about_odoo_mobile">Odoo Mobile</string>
     <!-- About Company Fragment Strings -->
     <string name="about_Company_line1">Copyright © 2004-TODAY Odoo SA. All Rights Reserved.</string>
