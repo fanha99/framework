@@ -218,18 +218,6 @@
                 android:textColor="#fff" />
 
             <TextView
-                android:id="@+id/forgot_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="@string/font_light"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/label_forgot_password"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#ebebeb" />
-
-            <TextView
                 android:id="@+id/txvAddSelfHosted"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -241,18 +229,6 @@
                 android:text="@string/label_add_self_hosted_url"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffff" />
-
-            <TextView
-                android:id="@+id/create_account"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@string/font_light"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/label_create_account"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#ffffff"
-                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"

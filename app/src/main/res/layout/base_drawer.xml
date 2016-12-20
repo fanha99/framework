@@ -59,7 +59,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@string/font_normal"
                             android:ellipsize="end"
-                            android:singleLine="true"
+                            android:maxLines="1"
                             android:textColor="@color/body_text_1_inverse"
                             android:textSize="@dimen/text_size_xmedium"
                             android:textStyle="bold" />
@@ -71,7 +71,7 @@
 
 	                        <TextView
 	                            android:id="@+id/profile_url_text"
-	                            android:singleLine="true"
+                                android:maxLines="1"
 	                            android:layout_marginTop="2dp"
 	                            android:layout_width="0dp"
 	                            android:layout_weight="1"

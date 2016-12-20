@@ -31,7 +31,7 @@
             android:fontFamily="@string/font_light"
             android:layout_width="match_parent"
             android:inputType="textPassword"
-            android:singleLine="true"
+            android:maxLines="1"
             android:hint="@string/error_provide_password"
             android:layout_height="wrap_content" />
     </LinearLayout>

@@ -6,7 +6,7 @@ android {
     defaultConfig {
         useLibrary 'org.apache.http.legacy'
         manifestPlaceholders = [applicationName: "QQBee"]
-        applicationId "com.odoo"
+        applicationId "com.qqbee"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 7

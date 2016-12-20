@@ -17,7 +17,7 @@
         android:fontFamily="@string/font_normal"
         android:gravity="center_vertical"
         android:paddingLeft="@dimen/default_16dp"
-        android:singleLine="true"
+        android:maxLines="1"
         android:textAllCaps="true"
         android:textColor="@color/drawer_separator_text_color"
         android:textSize="@dimen/text_size_small"

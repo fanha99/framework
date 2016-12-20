@@ -92,9 +92,6 @@ public class About extends AppCompatActivity implements View.OnClickListener {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_about, menu);
         OPreferenceManager pref = new OPreferenceManager(this);
-        if (pref.getBoolean(DEVELOPER_MODE, false)) {
-            menu.findItem(R.id.menu_developer_mode).setVisible(true);
-        }
         return true;
     }
 
@@ -105,16 +102,6 @@ public class About extends AppCompatActivity implements View.OnClickListener {
                 // app icon in action bar clicked; go home
                 finish();
                 return true;
-            case R.id.menu_about_our_apps:
-                IntentUtils.openURLInBrowser(this, OConstants.URL_ODOO_APPS_ON_PLAY_STORE);
-                return true;
-            case R.id.menu_about_github:
-                IntentUtils.openURLInBrowser(this, OConstants.URL_ODOO_MOBILE_GIT_HUB);
-                return true;
-            case R.id.menu_export_db:
-                IrModel model = new IrModel(this, null);
-                model.exportDB();
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -122,25 +109,6 @@ public class About extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (!pref.getBoolean(DEVELOPER_MODE, false)) {
-            if (runnable == null) {
-                runnable = new Runnable() {
-                    public void run() {
-                        click_count = 0;
-                    }
-                };
-                handler.postDelayed(runnable, 7000);
-            }
-            click_count = click_count + 1;
-            if (click_count == 3) {
-                Toast.makeText(this, R.string.developer_2_tap, Toast.LENGTH_SHORT).show();
-            }
-            if (click_count == 5) {
-                pref.setBoolean(DEVELOPER_MODE, true);
-                Toast.makeText(this, R.string.developer_5_tap, Toast.LENGTH_SHORT).show();
-                finish();
-                startActivity(new Intent(this, About.class));
-            }
-        }
+
     }
 }

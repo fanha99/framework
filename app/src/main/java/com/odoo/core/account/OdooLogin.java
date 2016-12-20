@@ -84,11 +84,7 @@ public class OdooLogin extends AppCompatActivity implements View.OnClickListener
 
     private void init() {
         mLoginProcessStatus = (TextView) findViewById(R.id.login_process_status);
-        TextView mTermsCondition = (TextView) findViewById(R.id.termsCondition);
-        mTermsCondition.setMovementMethod(LinkMovementMethod.getInstance());
         findViewById(R.id.btnLogin).setOnClickListener(this);
-        findViewById(R.id.forgot_password).setOnClickListener(this);
-        findViewById(R.id.create_account).setOnClickListener(this);
         findViewById(R.id.txvAddSelfHosted).setOnClickListener(this);
         edtSelfHosted = (EditText) findViewById(R.id.edtSelfHostedURL);
         toggleSelfHostedURL();
@@ -119,12 +115,6 @@ public class OdooLogin extends AppCompatActivity implements View.OnClickListener
             case R.id.btnLogin:
                 loginUser();
                 break;
-            case R.id.forgot_password:
-                IntentUtils.openURLInBrowser(this, OConstants.URL_ODOO_RESET_PASSWORD);
-                break;
-            case R.id.create_account:
-                IntentUtils.openURLInBrowser(this, OConstants.URL_ODOO_SIGN_UP);
-                break;
         }
     }
 
@@ -135,7 +125,7 @@ public class OdooLogin extends AppCompatActivity implements View.OnClickListener
             findViewById(R.id.layoutSelfHosted).setVisibility(View.VISIBLE);
             edtSelfHosted.setOnFocusChangeListener(this);
             edtSelfHosted.requestFocus();
-            txvAddSelfHosted.setText(R.string.label_login_with_odoo);
+            txvAddSelfHosted.setVisibility(View.GONE);
         } else {
             findViewById(R.id.layoutBorderDB).setVisibility(View.GONE);
             findViewById(R.id.layoutDatabase).setVisibility(View.GONE);

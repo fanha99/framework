@@ -42,7 +42,7 @@
                         android:textAppearance="?android:textAppearanceMedium"
                         android:textColor="#ffffff"
                         android:fontFamily="@string/font_normal"
-                        android:singleLine="true"
+                        android:maxLines="1"
                         android:ellipsize="end"
                         android:layout_marginRight="5dp"
                         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
                         android:textColor="#ebebeb"
                         android:textStyle="italic"
                         android:fontFamily="@string/font_condensed"
-                        android:singleLine="true"
+                        android:maxLines="1"
                         android:ellipsize="end"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -77,7 +77,7 @@
                     android:textColor="#bbffffff"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@string/font_normal"
-                    android:singleLine="true"
+                    android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -86,7 +86,7 @@
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="#ffffff"
                     android:fontFamily="@string/font_normal"
-                    android:singleLine="true"
+                    android:maxLines="1"
                     android:ellipsize="end"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />

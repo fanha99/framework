@@ -33,7 +33,7 @@
             android:layout_gravity="center_vertical"
             android:ellipsize="end"
             android:fontFamily="@string/font_light"
-            android:singleLine="true"
+            android:maxLines="1"
             android:textColor="@color/body_text_1"
             android:textSize="@dimen/text_size_medium" />
 
@@ -44,7 +44,7 @@
             android:layout_gravity="center_vertical"
             android:ellipsize="end"
             android:fontFamily="@string/font_light"
-            android:singleLine="true"
+            android:maxLines="1"
             android:textColor="@color/body_text_2"
             android:textSize="@dimen/text_size_medium" />
     </LinearLayout>
