@@ -136,30 +136,19 @@ public class PhoneStateReceiver extends BroadcastReceiver implements IOnCustomer
 
     private void showMissCallNotification(Bundle data) {
         mPref.setBoolean(KEY_OFFHOOK, false);
-//        if (data != null && !mPref.getBoolean("notified", false)) {
-//            mPref.setBoolean("notified", true);
-//            int notification_id = 55568;
-//            ONotificationBuilder builder = new ONotificationBuilder(mContext, notification_id);
-//            data.putInt("notification_id", notification_id);
-//            builder.setTitle(_s(R.string.label_missed_call_from_customer));
-//            builder.setIcon(R.drawable.ic_action_user);
-//            builder.setText(data.getString("name"));
-//            ONotificationBuilder.NotificationAction callBack =
-//                    new ONotificationBuilder.NotificationAction(R.drawable.ic_action_phone,
-//                            "Call back", REQUEST_CALL_BACK,
-//                            ACTION_CALL_BACK, PhoneCallDetail.class, data);
-//            builder.addAction(callBack);
-//            data.putBoolean(PhoneCallDetail.KEY_LOG_CALL_REQUEST, true);
-//            data.putString(PhoneCallDetail.KEY_PHONE_NUMBER, callerNumber);
-//            data.putInt(PhoneCallDetail.KEY_OPPORTUNITY_ID, data.getInt("opportunity_id"));
-//            ONotificationBuilder.NotificationAction scheduleCall =
-//                    new ONotificationBuilder.NotificationAction(R.drawable.ic_action_reschedule,
-//                            "Schedule", REQUEST_CALL_SCHEDULE,
-//                            ACTION_CALL_SCHEDULE, PhoneCallDetail.class, data);
-//            builder.addAction(scheduleCall);
-//            builder.allowVibrate(false);
-//            builder.build().show();
-//        }
+        if (data != null && !mPref.getBoolean("notified", false)) {
+            mPref.setBoolean("notified", true);
+            int notification_id = Integer.parseInt(callerNumber);
+            ONotificationBuilder builder = new ONotificationBuilder(mContext, notification_id);
+            data.putInt("notification_id", notification_id);
+            builder.setTitle(_s(R.string.label_missed_call_from_customer));
+            builder.setIcon(R.drawable.ic_action_user);
+            builder.setText(data.getString("name") + " " + callerNumber);
+            builder.setBigText(data.getString("name") + " " + callerNumber);
+
+            builder.allowVibrate(false);
+            builder.build().show();
+        }
     }
 
     public String _s(int res_id) {
